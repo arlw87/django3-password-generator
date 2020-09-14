@@ -1,0 +1,124 @@
+<!-- Want to look like this https://getbootstrap.com/docs/4.0/examples/sign-in/ -->
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+            <!-- Bootstrap CSS -->
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+
+
+        <title>Password Generator</title>
+        <style type="text/css">
+                .center{
+                    margin: auto;
+                    text-align: center;
+                }
+                html, body{
+                    height: 100%;
+                    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                }
+
+                .login-card{
+                    opacity: 0.9;
+                    border-radius: 1rem;
+                }
+
+                .card{
+                    margin-right: auto;
+                    margin-left: auto;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                    float: none;
+                    margin-bottom: 10px; /* Added */
+                }
+                .card-body{
+                    text-align: center;
+
+                }
+                .form-control{
+                    border-radius: 1rem;
+                    font-size: 1rem;
+                    height: 2.5rem;
+                    width: 100%;
+                }
+                body {
+                    background-color: LightGray;
+                }
+                .row{
+                    height: 100%;
+                }
+
+                .container-col{
+                    height: 100%;
+                }
+
+                .standard-font{
+                    font-size: 1.3rem;
+                }
+
+                input.larger {
+                    width: 1.3rem;
+                    height: 1.3rem;
+                }
+
+                .margin-right {
+                    margin-right: 0.7rem;
+                }
+
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid container-col">
+            <div class="row">
+                <div class="col-lg-6 mx-auto align-self-center">
+                    <div class="card login-card">
+                        <div class="card-body">
+                            <h1><u>Password Generator</u></h1>
+                            <br>
+                            <form action = "{% url 'password' %}" class="form-signin standard-font">
+                                <label for="passwordLength">Password Length</<label>
+                                <select id="passwordLength" name="passwordLength">
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18" selected="selected">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                </select>
+                                <br>
+                                <br>
+                                <label for="Uppercase" class="margin-right">Include uppercase letters</label>
+                                <input type="checkbox" id="Uppercase" name="Uppercase" class="larger">
+                                <br>
+
+                                <label for="numbers" class="margin-right">Include numbers   </label>
+                                <input type="checkbox" id="numbers" name="numbers" class="larger">
+                                <br>
+
+                                <label for="specialCharacters" class="margin-right">Include special characters  </label>
+                                <input type="checkbox" id="specialCharacters" name="specialCharacters" class="larger">
+                                <br>
+                                <br>
+                                <input type="submit" value="Generate" id="submitButton" class="btn btn-primary standard-font">
+                            </form>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
